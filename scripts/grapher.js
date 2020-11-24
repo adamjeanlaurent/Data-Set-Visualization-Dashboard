@@ -4,9 +4,9 @@
 
 class Grapher {
     constructor(df) {
-        this.df = df;
+
     }
-    barPlot() {
+    barPlot(df, domElement) {
         // get index
         
     }
