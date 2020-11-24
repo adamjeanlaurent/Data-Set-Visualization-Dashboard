@@ -13,14 +13,10 @@ const main = async() => {
     const summaryStatistics = new SummaryStats();
     summaryStatistics.getAllColumnInfo(df);
 
-    /*
-        index is the x axis
-        the first array needs to be one of the value counts
-    */
-    let ndf = new dfd.DataFrame({'pig': [20,43,54,76,34,23,54,23]}, {index: df["classification"].value_counts().index_arr})
-    ndf.plot("plot").bar()
-
-
+    // .data is array of occureces 
+    // .index_arr is all value tpyes
+    let ndf = new dfd.DataFrame({'counts': df["classification"].value_counts().data}, {index: df["classification"].value_counts().index_arr})
+    ndf.plot("plot").bar();
 }
 
 main();
