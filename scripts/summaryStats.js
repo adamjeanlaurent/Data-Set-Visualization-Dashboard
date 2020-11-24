@@ -25,14 +25,14 @@ class SummaryStats {
         // number of cols must be known first
         for(let i = 0; i < this.numCols; i++) {
             let colInfo = new ColumnInformation();
-
+            
             this.setColumnType(i, colInfo, df);
             this.setName(i, colInfo, df);
             this.setMean(colInfo, df);
             this.setMedian(colInfo, df);
             this.setMinAndMax(colInfo, df);
             this.setMode(colInfo, df);
-
+            
             this.colInfos.push(colInfo);
         }
     }
